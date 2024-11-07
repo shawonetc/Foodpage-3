@@ -5,41 +5,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <!-- css  -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- tailwind cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- swipper  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- font  --> 
+    <!-- font  -->
 
     <!-- icon       -->
     <script src="https://kit.fontawesome.com/9710cf8566.js" crossorigin="anonymous"></script>
 
+
 </head>
 
 <body class="m-0 p-0 box-border">
-    <header>
+
+    <!-- nav  -->
+    <header
+        class='container bg-white font-sans min-h-[60px] py-3 relative tracking-wide z-50 px-4 md:px-10 shadow-md shadow-yellow-500 mx-auto rounded-full'>
+        <div class='flex flex-wrap items-center max-xl:gap-y-6 max-sm:gap-x-4'>
+            <a href="javascript:void(0)" class="text-3xl md:text-4xl font-bold text-[#1b6cfc] tracking-wide">
+                <img src="img/Frame 1.png" alt="">
+            </a>
+
+            <div id="collapseMenu"
+                class="max-xl:hidden xl:!flex xl:items-center max-xl:before:fixed max-xl:before:bg-black max-xl:before:opacity-40 max-xl:before:inset-0 max-xl:before:z-50">
+                <button id="toggleClose" class='xl:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-black" viewBox="0 0 320.591 320.591">
+                        <path
+                            d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                            data-original="#000000"></path>
+                        <path
+                            d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                            data-original="#000000"></path>
+                    </svg>
+                </button>
+
+                <ul
+                    class='xl:flex xl:gap-x-10 xl:absolute xl:left-1/2 xl:-translate-x-1/2 max-xl:space-y-3 max-xl:fixed max-xl:bg-white max-xl:w-2/3 max-xl:min-w-[300px] max-xl:top-0 max-xl:left-0 max-xl:px-10 max-xl:py-4 max-xl:h-full max-xl:shadow-md max-xl:overflow-auto z-50'>
+                    <li class='mb-6 hidden max-xl:block'>
+                        <a href="javascript:void(0)"
+                            class="text-3xl md:text-4xl font-bold text-[#1b6cfc] tracking-wide">
+                            <img src="img/Frame 1.png" alt="">
+                        </a>
+                    </li>
+
+                    <li class='flex flex-shrink max-xl:border-b max-xl:py-3'><a href='javascript:void(0)'
+                            class='text-[#090b0e] hover:bg-[#fecb16] hover:rounded-full hover:px-2 hover:py-1 hover:text-[#ff422e] text-lg  block font-semibold'>Why
+                            Us ?</a>
+                    </li>
+                    <li class='flex flex-shrink max-xl:border-b max-xl:py-3'><a href='javascript:void(0)'
+                            class='text-[#090b0e] hover:bg-[#fecb16] hover:rounded-full hover:px-2 hover:py-1 hover:text-[#ff422e] text-lg  block font-semibold'>Services
+                        </a>
+                    </li>
+                    <li class='flex flex-shrink max-xl:border-b max-xl:py-3'><a href='javascript:void(0)'
+                            class='text-[#090b0e] hover:bg-[#fecb16] hover:rounded-full hover:px-2 hover:py-1 hover:text-[#ff422e] text-lg  block font-semibold'>Menu
+                        </a>
+                    </li>
+                    <li class='flex flex-shrink max-xl:border-b max-xl:py-3'><a href='javascript:void(0)'
+                            class='text-[#090b0e] hover:bg-[#fecb16] hover:rounded-full hover:px-2 hover:py-1 hover:text-[#ff422e] text-lg  block font-semibold'>Contact
+                            Us
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class='flex items-center ml-auto space-x-8'>
+                <div>
+                     <img src="img/solar_cart-outline.png" alt="" class="bg-[#ff422e] p-1 rounded-full">
+                </div>
+
+
+                <button id="toggleOpen" class='xl:hidden'>
+                    <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+    </header>
+    <main>
         <!-- banner -->
         <div
-            class="flex gap-12 md:gap-10 flex-col lg:flex-row justify-between items-center px-4 md:px-10 md:py-10 py-5 lg:my-5 md:my-0 md:mb-5 bg-white relative">
+            class="container flex gap-12 md:gap-10 flex-col lg:flex-row justify-between items-center px-4 md:px-10 md:py-10 my-5 lg:my-5 md:my-0 md:mb-5 bg-white relative">
 
-            <div class="absolute xl:top-28 lg:top-6 left-8 w-28 h-28 bg-[#ff422e40] bg-opacity-25  
-             bg-gradient-to-tl rounded-full shadow-2xl">
+
+            <div class="absolute xl:top-28 lg:top-6 left-8  w-28 h-28 bg-[#ff422e40] bg-opacity-25  
+          bg-gradient-to-tl rounded-full shadow-2xl">
 
             </div>
             <div class="absolute  md:top-20 md:right-[49%] right-9 top-10 w-16 h-16 bg-[#ff422e40] bg-opacity-25  
-         bg-gradient-to-tl rounded-full shadow-2xl">
-              
+      bg-gradient-to-tl rounded-full shadow-2xl">
+
             </div>
 
             <div class="absolute bottom-2 right-[26%] w-28 h-28 bg-[#ff422e40] bg-opacity-25  
-     bg-gradient-to-tl rounded-full">
+  bg-gradient-to-tl rounded-full">
 
             </div>
 
@@ -51,9 +122,10 @@
                 <img src="img/Group 6.png" alt="">
             </div>
 
-               <!-- slider box  -->
-               <!-- xl:top-12 xl:right-5 lg:right-3 lg:top-5  -->
-            <div class="absolute flex items-center bg-white rounded-lg shadow-xl p-3 xl:max-w-[12%] lg:max-w-40 max-w-40  md:right-9 md:bottom-[44%] bottom-[40%] right-1 z-20">
+            <!-- slider box  -->
+            <!-- xl:top-12 xl:right-5 lg:right-3 lg:top-5  -->
+            <div
+                class="absolute flex items-center bg-white rounded-lg shadow-xl p-3 xl:max-w-[12%] lg:max-w-40 max-w-40  md:right-9 md:bottom-[44%] bottom-[40%] right-1 z-20">
                 <!-- Image  -->
                 <div class="rounded-lg overflow-hidden flex-1">
                     <!-- Image -->
@@ -123,39 +195,39 @@
                     class="flex gap-1 uppercase px-4 py-2 bg-gradient-to-r from-[#ff422e] to-[#fecb16]  text-white rounded-xl font-medium">
                     Order Now</button>
 
-                <div class="flex flex-col sm:flex-row gap-2"> 
+                <div class="flex flex-col sm:flex-row gap-2">
                     <!-- Google Play Button -->
                     <div class="w-1/2 md:w-1/3">
                         <a href="https://play.google.com/store" target="_blank"
-                        class="flex gap-2 items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800">
-                        <div>
-                            <i class="fa-brands fa-google-play"></i>
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="text-xs">Get it on </span>
-                            <div>Google Play</div>
-                        </div>
+                            class="flex gap-2 items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800">
+                            <div>
+                                <i class="fa-brands fa-google-play"></i>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-xs">Get it on </span>
+                                <div>Google Play</div>
+                            </div>
 
-                    </a>
+                        </a>
                     </div>
 
                     <!-- App Store Button -->
-                     <div class="w-1/2 md:w-1/3">
+                    <div class="w-1/2 md:w-1/3">
                         <a href="https://apps.apple.com" target="_blank"
-                        class="flex gap-2 items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 384 512"
-                            fill="currentColor">
-                            <path
-                                d="M318.7 268c-.2-58.4 47.7-86.4 49.8-87.8-27.2-39.7-69.4-45-84.5-45-35.8-3.6-69.9 21-88.1 21-18.2 0-46.4-20.5-76.2-19.9-39 0-75.1 23-95.1 58-40.8 71.1-10.4 176 29.2 233.4 19.4 28.1 42.5 59.6 72.8 58.4 29.4-1.2 40.7-18.9 76.4-18.9 35.7 0 45.5 18.9 76.3 18.4 31.7-.5 51.7-28.8 70.9-57.1 22.4-32.7 31.7-64.5 32.1-66.2-.7-.3-62.2-23.8-62.5-94.6zM261.1 85.3c16.2-19.6 27.1-47 24.2-74.3-23.4.9-51.7 15.7-68.4 35.3-15 17.3-28.2 45.2-24.7 71.5 26.3 2 52.8-13.2 68.9-32.5z" />
-                        </svg>
+                            class="flex gap-2 items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 384 512"
+                                fill="currentColor">
+                                <path
+                                    d="M318.7 268c-.2-58.4 47.7-86.4 49.8-87.8-27.2-39.7-69.4-45-84.5-45-35.8-3.6-69.9 21-88.1 21-18.2 0-46.4-20.5-76.2-19.9-39 0-75.1 23-95.1 58-40.8 71.1-10.4 176 29.2 233.4 19.4 28.1 42.5 59.6 72.8 58.4 29.4-1.2 40.7-18.9 76.4-18.9 35.7 0 45.5 18.9 76.3 18.4 31.7-.5 51.7-28.8 70.9-57.1 22.4-32.7 31.7-64.5 32.1-66.2-.7-.3-62.2-23.8-62.5-94.6zM261.1 85.3c16.2-19.6 27.1-47 24.2-74.3-23.4.9-51.7 15.7-68.4 35.3-15 17.3-28.2 45.2-24.7 71.5 26.3 2 52.8-13.2 68.9-32.5z" />
+                            </svg>
 
-                        <div class="flex flex-col">
-                            <span class="text-xs">Download on the </span>
-                            <div>App Store</div>
-                        </div>
-                    </a>
-                     </div>
-                   
+                            <div class="flex flex-col">
+                                <span class="text-xs">Download on the </span>
+                                <div>App Store</div>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
 
             </div>
@@ -165,18 +237,20 @@
             </div>
 
         </div>
-    </header>
-    <main>
         <!-- after banner  -->
-        <div class="sell mx-auto lg:my-16 md:my-5 my-1 pt-4 sm:pt-0 md:mb-11 box-border content-center flex justify-center overflow-x-clip">
+        <div
+            class="container sell mx-auto lg:my-16 md:my-5 my-1 pt-4 sm:pt-0 md:mb-11 box-border content-center flex justify-center overflow-x-clip">
 
             <div class="relative mx-auto flex justify-center items-center">
                 <img src="img/Vector 1.png" alt="" class="mx-auto">
                 <div class="absolute xl:-left-20 xl:top-14 lg:left-0 lg:top-4 left-0 md:-top-10 top-5">
                     <img src="img/image 1.png" alt="" class="w-1/3 md:w-full">
                 </div>
-                <div class="absolute xl:left-[30%] xl:top-40 lg:top-24 lg:left-[42%] md:left-[52%] md:bottom-3 hidden md:block lg:space-y-8 md:space-y-2">
-                    <h3 class="xl:text-4xl text-2xl font-bold text-white lg:text-left text-center xl:max-w-sm md:max-w-72">Great food and lots of discounted prices</h3>
+                <div
+                    class="absolute xl:left-[30%] xl:top-40 lg:top-24 lg:left-[42%] md:left-[52%] md:bottom-3 hidden md:block lg:space-y-8 md:space-y-2">
+                    <h3
+                        class="xl:text-4xl text-2xl font-bold text-white lg:text-left text-center xl:max-w-sm md:max-w-72">
+                        Great food and lots of discounted prices</h3>
                     <div class="flex items-center xl:gap-4 gap-2 lg:flex-row flex-col justify-start">
                         <!-- Profile images with a "+" overlay -->
                         <div class="flex -space-x-2">
@@ -211,20 +285,24 @@
                     </div>
 
                 </div>
-                      <div>
-                <div class="absolute w-20 h-20 xl:top-4 xl:right-[28%] lg:-top-2 lg:right-32 bg-white
+                <div>
+                    <div class="absolute w-20 h-20 xl:top-4 xl:right-[28%] lg:-top-2 lg:right-32 bg-white
              bg-gradient-to-tl rounded-full">
-                </div>
-                <!-- border  -->
-                <div class="border-l-8 border-dotted border-white absolute xl:right-[31%] lg:right-40 top-[17%] h-80"></div>
+                    </div>
+                    <!-- border  -->
+                    <div
+                        class="border-l-8 border-dotted border-white absolute xl:right-[31%] lg:right-40 top-[17%] h-80">
+                    </div>
 
-                <div class="absolute -bottom-4 xl:right-[28%] lg:right-[12%] w-20 h-20 bg-white
+                    <div class="absolute -bottom-4 xl:right-[28%] lg:right-[12%] w-20 h-20 bg-white
                 bg-gradient-to-tl rounded-full">
 
+                    </div>
                 </div>
-            </div>
                 <div class="absolute xl:right-5 lg:top-40 lg:right-6 md:right-0 md:top-28 top-10 right-5">
-                    <div class="text-white font-bold xl:text-9xl lg:text-5xl md:text-4xl text-2xl px-4 py-2 rounded-t-lg">70%</div>
+                    <div
+                        class="text-white font-bold xl:text-9xl lg:text-5xl md:text-4xl text-2xl px-4 py-2 rounded-t-lg">
+                        70%</div>
 
                 </div>
             </div>
@@ -232,10 +310,10 @@
 
 
         </div>
-        
+
 
         <!-- slider  -->
-        <section class="lg:my-16 my-0 px-4 md:px-10">
+        <section class="container lg:my-16 my-0 px-4 md:px-10">
             <div class="xl:pb-2 lg:pt-0 md:pt-5 pb-0 mb-0">
                 <h1 class="lg:text-4xl text-2xl font-extrabold max-w-lg px-5">
                     Favorite
@@ -275,7 +353,7 @@
                         <div class="rounded-lg overflow-hidden shadow-lg">
                             <!-- Image -->
                             <div class="relative">
-                                <img src="img/Rectangle 44.png" alt="Spicy Shrimp Fried Rice" class="w-full">
+                                <img src="img/Rectangle 44 (2).png" alt="Spicy Shrimp Fried Rice" class="w-full">
                                 <!-- Cart Icon -->
                                 <div
                                     class="absolute bottom-7 right-0 left-0 flex rounded-full p-2 justify-between items-center">
@@ -328,7 +406,7 @@
                         <div class="rounded-lg overflow-hidden shadow-lg">
                             <!-- Image -->
                             <div class="relative">
-                                <img src="img/Rectangle 44.png" alt="Spicy Shrimp Fried Rice" class="w-full">
+                                <img src="img/4food.png" alt="Spicy Shrimp Fried Rice" class="w-full">
                                 <!-- Cart Icon -->
                                 <div
                                     class="absolute bottom-7 right-0 left-0 flex rounded-full p-2 justify-between items-center">
@@ -472,9 +550,9 @@
             });
             console.log(swiper);
         </script>
-       
+
         <!-- deliver  -->
-        <section class="lg:my-16 md:my-5 px-4 md:px-10 mx-auto">
+        <section class="container lg:my-16 md:my-5 px-4 md:px-10 mx-auto">
             <div class="flex items-center flex-col-reverse lg:flex-row lg:gap-20 md:gap-10 gap-5">
                 <div>
                     <img src="img/Group 13.png" alt="">
@@ -526,14 +604,15 @@
         </section>
 
         <!-- discount  -->
-        <section class="card mx-auto lg:my-16 md:my-8 my-4">
+        <section class="container card mx-auto lg:my-16 md:my-8 my-4">
             <div class="text-white md:h-auto md:w-full w-[100%] h-[98%]">
                 <figure><img alt="daisy" src="img/Group 11.png" class="shadow-lg" /></figure>
 
                 <div
                     class="flex flex-col justify-center items-center absolute card-body text-center text-white space-y-0 md:space-y-3 lg:top-10 md:top-5 xl:right-[25%] lg:right-[16%] md:right-[18%] -top-4 right-3 mx-auto">
                     <div class="mx-auto flex flex-col justify-center items-center">
-                        <h1 class="text-xs md:text-2xl lg:text-4xl xl:text-6xl font-extrabold max-w-3xl">Register and get discount up to 70 %
+                        <h1 class="text-xs md:text-2xl lg:text-4xl xl:text-6xl font-extrabold max-w-3xl">Register and
+                            get discount up to 70 %
                         </h1>
                         <!-- form    -->
                         <div class="container mx-auto px-4 md:py-8 py-2">
@@ -552,7 +631,7 @@
         </section>
 
         <!-- choose  -->
-        <section class="px-4 md:p-10 mx-auto bg-[#ff422e40] bg-opacity-25 lg:my-16 md:my-8">
+        <section class="container px-4 md:p-10 mx-auto bg-[#ff422e40] bg-opacity-25 lg:my-16 md:my-8">
             <div class="flex gap-3 flex-col items-center p-5">
                 <h1 class="text-2xl md:text-5xl font-extrabold">Why Choose Us</h1>
                 <p class="px-3 md:px-5 lg:px-72 text-center">Contrary to popular belief, is not simply random text. It
@@ -673,6 +752,8 @@
     <footer>
 
     </footer>
+    <!-- nav js  -->
+    <script src="nav.js"></script>
 </body>
 
 </html>
