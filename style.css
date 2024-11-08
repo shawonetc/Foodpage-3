@@ -37,3 +37,8 @@ section .swiper-slide img {
   margin: 0 10px;
   font-size: 13px;
 }
+
+
+.roboto-slab {
+  font-family: "Roboto Slab", serif;
+}
